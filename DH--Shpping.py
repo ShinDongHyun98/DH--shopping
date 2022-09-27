@@ -8,9 +8,8 @@
 #include <Pixy2Video.h>
 #include <TPixy2.h>
 #include <ZumoBuzzer.h>
-#include <ZumoMotors.h>
-
-Pixy pixy;
+#include <ZumoMotors.h> 
+Pixy2 pixy;
 
 void setup() {
   Serial.begin(115200);
@@ -21,7 +20,7 @@ void setup() {
 }
 
 void loop() {
-  pixy.ccc.getBlocks();     //픽시색상공부블록을 갖고오는것
+  pixy2.ccc.getBlocks();     //픽시색상공부블록을 갖고오는것
   
   // 픽시가 색인식하였을 때
   if (pixy.ccc.numBlocks)
