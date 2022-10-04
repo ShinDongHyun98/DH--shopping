@@ -20,7 +20,8 @@ void setup() {
 }
 
 void loop() {
-  pixy2.ccc.getBlocks();     //픽시색상공부블록을 갖고오는것
+  int i; 
+  pixy.ccc.getBlocks();     //픽시색상공부블록을 갖고오는것
   
   // 픽시가 색인식하였을 때
   if (pixy.ccc.numBlocks)
@@ -34,4 +35,5 @@ void loop() {
       Serial.print(": ");
       pixy.ccc.blocks[i].print();
     }
+}
 }
